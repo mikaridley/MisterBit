@@ -1,0 +1,4 @@
+
+import {programs,type ProgramKey} from '../content';
+import {Header,Hero,About,Process,Contact,Footer,CTA} from '../ui';
+export default function Program({program}:{program:ProgramKey}){const key=program as ProgramKey;const p=programs[key];return <><Header detail/><main><Hero program={key}/><section className="section"><div className="wrap narrow"><span className="eyebrow">ההתאמה מתחילה בהיכרות</span><h2>{p.solution}</h2><p>{p.body}</p><p>{p.extra}</p></div></section><section className="offer-section"><div className="wrap offer-panel"><span className="eyebrow">מסלול {p.label}</span><h2>{p.offerTitle}</h2><strong className={'offer-title '+(key==='experienced'?'smaller':'')}>{p.offer}</strong>{p.offerSub&&<strong className="offer-sub">{p.offerSub}</strong>}<p>{p.offerBody}</p><CTA>{p.cta}</CTA></div></section><About/><Process program={key}/><Contact program={key}/><Footer/></main></>}

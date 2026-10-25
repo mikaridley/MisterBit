@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="not-found"><h1>העמוד הזה לא נמצא</h1><p>בואו נמצא את המסלול שמתאים לצוות שלכם.</p><a className="button" href="/misterbit-demo/">חזרה לעמוד הבית ←</a></main>}
